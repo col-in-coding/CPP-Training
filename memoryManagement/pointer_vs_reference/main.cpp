@@ -17,6 +17,9 @@ void AddFour(int &val)
  * if a third-party function is used without properly looking 
  * at the parameter definition, it might go unnoticed that a 
  * value has been modified
+ * 
+ * If nullptr pass, only pointer can handle this
+ * In most other cases, using reference instead
  */
 void AddSix(int *val)
 {
