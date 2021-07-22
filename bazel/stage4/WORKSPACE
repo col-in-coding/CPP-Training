@@ -1,0 +1,4 @@
+local_repository(
+    name = "coworkers_project",
+    path = "/mnt/d/Github/examples/cpp-tutorial/other_bazel_proj",
+)
