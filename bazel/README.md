@@ -2,6 +2,13 @@
 
 This package will showcase how to build C++ code in stages.
 
+## How to build
+```
+bazel build //package:target
+
+```
+
+## Files
 ### Stage 1
 The first stage is really simple and shows you how to compile a binary with a single source file.
 
