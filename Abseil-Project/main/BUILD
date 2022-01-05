@@ -9,3 +9,12 @@ cc_binary(
   deps = ["//proto:addressbook_cc_proto"],
   srcs = ["print_my_pb.cc"]
 )
+
+cc_binary(
+  name = "main_logger",
+  srcs = ["main_logger.cc"],
+  deps = [
+    "@com_google_absl//absl/strings",
+    "@com_github_google_glog//:glog"
+  ],
+)
