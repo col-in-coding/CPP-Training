@@ -12,17 +12,13 @@ proto_library(
     name = "addressbook_proto",
     srcs = ["addressbook.proto"],
     deps = [
-        ":person_proto",
-        # Well known protos should be included as deps in the
-        # proto_library rules of the source files importing them.
-        # A list of all @com_google_protobuf well known protos can
-        # seen with:
-        # `bazel query 'kind(proto_library, @com_google_protobuf//:all)'`
-        "@com_google_protobuf//:any_proto",
+        ":person_proto"
     ]
 )
 
 proto_library(
     name = "person_proto",
-    srcs = ["person.proto"]
+    srcs = [
+        "person.proto"
+    ]
 )
