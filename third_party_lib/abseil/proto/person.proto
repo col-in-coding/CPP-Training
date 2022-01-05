@@ -18,5 +18,5 @@ message Person {
       optional PhoneType type = 2 [default = HOME];
     }
   
-    repeated PhoneNumber phones = 4;
+    repeated PhoneNumber phone = 4;
   }
