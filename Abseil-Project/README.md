@@ -1,2 +1,7 @@
-## How to run
-bazel run //main:print_my_pb
+## How to build and run test file
+`bazel run //main:hello_world`  
+`bazel run //main:main_logger`  
+`bazel run //main:print_my_pb`  
+
+## Google Logging Library (GLOG)
+https://github.com/google/glog

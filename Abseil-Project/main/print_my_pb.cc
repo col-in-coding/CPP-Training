@@ -15,8 +15,8 @@ int main(int argc, char const *argv[])
     phone1->set_number("312-307-2050");
     phone1->set_type(demo::Person::MOBILE);
 
-    demo::Person* next_person = address_book.add_people();
-    // auto next_person = address_book.add_people();
+    // demo::Person* next_person = address_book.add_people();
+    auto next_person = address_book.add_people();
     next_person->CopyFrom(p1);
     
     std::cout << address_book.DebugString() << std::endl;
