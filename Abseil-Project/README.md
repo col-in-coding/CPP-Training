@@ -5,3 +5,6 @@
 
 ## Google Logging Library (GLOG)
 https://github.com/google/glog
+
+## Proto Buffers
+https://developers.google.com/protocol-buffers/docs/reference/cpp-generated

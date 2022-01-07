@@ -19,6 +19,7 @@ int main(int argc, char const *argv[])
     auto next_person = address_book.add_people();
     next_person->CopyFrom(p1);
     
+    // Print Debug String
     std::cout << address_book.DebugString() << std::endl;
     return 0;
 }
