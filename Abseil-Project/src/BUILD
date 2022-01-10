@@ -18,3 +18,10 @@ cc_binary(
     "@com_github_google_glog//:glog"
   ],
 )
+
+cc_library(
+  name = "utils",
+  srcs = ["utils.cc"],
+  hdrs = ["utils.h"],
+  visibility = ["//visibility:public"],
+)
