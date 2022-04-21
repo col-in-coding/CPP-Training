@@ -26,6 +26,7 @@ namespace my{
         shared_pointer(const shared_pointer<T>& shared_ptr)
         {
             // std::cout << "using copy constructor" << std::endl;
+            // The access modifiers work on class level, and not on object level.
             _vptr = shared_ptr._vptr;
             _cnt++;
         };
