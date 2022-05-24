@@ -64,12 +64,21 @@ private:
     std::string _name;
 };
 
+class Teacher
+{
+public:
+    Teacher(std::string name): _name(name){};
+    std::string get_name(){return _name;}
+private:
+    std::string _name;
+};
+
 int main(){
     // Normal Pointer
     // Student *stu_ptr = new Student("Colin");
     // std::cout << stu_ptr->get_name() << std::endl;
     // delete stu_ptr;
-    
+
 /*
     // STL Smart Pointer
     // 1. initialization
@@ -80,16 +89,29 @@ int main(){
     std::shared_ptr<Student> stu_ptr2 = stu_ptr;
     // 4. get use count
     std::cout << stu_ptr2.use_count() << std::endl;
+    // 5. diff type obj
+    std::shared_ptr<Teacher> tea_ptr(new Teacher("Li"));
+    std::cout << tea_ptr.use_count() << std::endl;
+    // 6. TODO: same type another obj
+    std::shared_ptr<Student> stu_ptr3(new Student("Colin"));
+    std::cout << stu_ptr3.use_count() << std::endl;
 */
 
     // My Smart Pointer
     // 1. initialization
-    my::shared_pointer<Student> stu_ptr = new Student("Colin");
+    my::shared_pointer<Student> stu_ptr(new Student("Colin"));
     // 2. use resource
     std::cout << stu_ptr->get_name() << std::endl;
     // 3. assign to another pointer
     my::shared_pointer<Student> stu_ptr2 = stu_ptr;
     // 4. get use count
     std::cout << stu_ptr2.use_count() << std::endl;
+    // 5. diff type obj
+    my::shared_pointer<Teacher> tea_ptr(new Teacher("Li"));
+    std::cout << tea_ptr.use_count() << std::endl;
+    // 6. TODO: same type another obj
+    my::shared_pointer<Student> stu_ptr3(new Student("Colin"));
+    std::cout << stu_ptr3.use_count() << std::endl;
+
     return 0;
 }
